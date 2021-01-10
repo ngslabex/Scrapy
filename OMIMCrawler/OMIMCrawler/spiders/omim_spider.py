@@ -23,7 +23,7 @@ class OmimSpider(Spider):
                     continue
                 mim_num = line.rstrip().split('\t')[0]  # omim number: e.g. 600185
                 url = 'http://omim.org/entry/' + mim_num  # get OMIM entry
-                print url
+                print (url)
                 # HTTP request the URL
                 yield Request(url, method='GET', callback=self.parse_content)
 
